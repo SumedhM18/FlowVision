@@ -1,0 +1,80 @@
+/* ============================================
+   Traffic Light Action Display Styling
+   ============================================ */
+#color-action {
+  margin-top: 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000;  /* Bold shadow for better visibility */
+}
+
+/* ============================================
+   Main Container Layout
+   ============================================ */
+#container {
+  position: relative;  /* Enables absolute positioning of crosshair */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center items horizontally */
+}
+
+/* ============================================
+   Video Element Dimensions and Styling
+   ============================================ */
+#video {
+  width: 80vw;  /* 80% of viewport width */
+  max-width: 600px;  /* Maximum width constraint */
+  border-radius: 12px;  /* Rounded corners */
+  margin-top: 20px;
+  display: block;  /* Remove inline spacing */
+}
+
+/* ============================================
+   Canvas Element (Hidden)
+   ============================================ */
+/* Canvas is used for pixel sampling in JavaScript but not displayed */
+#canvas {
+  display: none;
+}
+
+/* ============================================
+   Crosshair Overlay Styling
+   ============================================ */
+/* Positioned at center of video to indicate sampling point */
+#crosshair {
+  position: absolute;
+  top: 50%;  /* Vertical center */
+  left: 50%;  /* Horizontal center */
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);  /* Center the crosshair itself */
+  pointer-events: none;  /* Allow clicks to pass through */
+}
+
+/* Pseudo-elements for crosshair lines */
+#crosshair::before,
+#crosshair::after {
+  content: "";
+  position: absolute;
+  background: white;  /* White lines for visibility */
+}
+
+/* Vertical line of the crosshair */
+#crosshair::before {
+  width: 2px;
+  height: 40px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);  /* Center horizontally */
+}
+
+/* Horizontal line of the crosshair */
+#crosshair::after {
+  width: 40px;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);  /* Center vertically */
+}

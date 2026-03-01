@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and viewport settings for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowVision</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for video and UI elements -->
+    <div id="container">
+        <!-- Video element that streams from user's camera -->
+        <video id="video" autoplay playsinline></video>
+        <!-- Crosshair overlay to indicate center sampling point -->
+        <div id="crosshair"></div>
+        <!-- Hidden canvas used for pixel color sampling -->
+        <canvas id="canvas"></canvas>
+    </div>
+    
+    <!-- Color information display section -->
+    <!-- Color preview box showing the sampled color -->
+    <div id="color-box"></div>
+    <!-- RGB value display (e.g., "rgb(255, 0, 0)") -->
+    <div id="color-value"></div>
+    <!-- Color name display (e.g., "Red") -->
+    <div id="color-name"></div>
+    <!-- Traffic light action display (STOP, YIELD, GO) -->
+    <div id="color-action"></div>
+    
+    <!-- Include main JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
